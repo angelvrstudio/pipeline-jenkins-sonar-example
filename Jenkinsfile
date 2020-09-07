@@ -8,6 +8,7 @@ tools {
         stage ('Compile Stage') {
 
             steps {
+            with Maven
                 {
                     sh 'mvn clean compile'
                 }
@@ -16,6 +17,7 @@ tools {
         stage ('Testing Stage') {
 
             steps {
+            with Maven
                 {
                     sh 'mvn test'
                 }
@@ -23,6 +25,7 @@ tools {
         }
         stage ('Deployment Stage') {
             steps {
+            with Maven
                  {
                     sh 'mvn deploy'
                 }
