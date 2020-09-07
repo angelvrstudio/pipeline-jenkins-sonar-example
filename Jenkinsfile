@@ -2,7 +2,7 @@ pipeline {
     agent any
 tools {
         maven 'Maven 3.5.0'
-        jdk 'jdk11'
+        jdk 'jdk8'
     }
     stages {
         stage ('Compile Stage') {
@@ -13,7 +13,6 @@ tools {
                 }
             }
         }
-
         stage ('Testing Stage') {
 
             steps {
@@ -22,8 +21,6 @@ tools {
                 }
             }
         }
-
-
         stage ('Deployment Stage') {
             steps {
                  {
